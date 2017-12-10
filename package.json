@@ -1,0 +1,26 @@
+{
+  "name": "nightlife-app",
+  "version": "1.0.0",
+  "description": "FreeCodeCamp API - Nightlife Coordination App.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.3",
+    "mongodb": "^2.2.28",
+    "mongoose": "^4.10.5",
+    "passport": "^0.3.2",
+    "passport-twitter": "^1.0.4",
+    "yelp-fusion": "^1.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jchurst/nightlife-app"
+  },
+  "author": "JC Hurst",
+  "license": "MIT"
+}
