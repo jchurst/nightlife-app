@@ -1,0 +1,65 @@
+<div class="search-bar row">
+  <div class="col-md-6 col-md-offset-3">
+    
+    <form action="/" method="get">
+      <label for="location" class="sr-only">Enter your location</label>
+      <div class="input-group input-group-lg">
+        <input type="text" name="location" id="location" class="form-control" placeholder="Enter your location">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-default">Go!</button>
+        </span>
+      </div>
+    </form>
+    
+    <p class="yelp-credit">Powered by <a href="http://yelp.com" target="_blank">Yelp</a>.</p>
+    
+  </div>
+</div>
+
+{{#if searchResults.length}}
+  <h2 class="search-request">Bars near <em>{{searchRequest.location}}</em></h2>
+  <div class="bars row">
+    {{#each searchResults}}
+      <div class="col-sm-4 col-md-3">
+
+        <div class="bar panel panel-default">
+          <a href="{{this.url}}" target="_blank" class="bar-thumb" style="background-image: url({{this.image_url}})">
+            <span class="sr-only">Thumbanil for {{this.name}}</span>
+          </a>
+          <div class="panel-body">
+            <h3 class="bar-title">
+              <a href="{{this.url}}" target="_blank">{{this.name}}</a>
+            </h3>
+
+            <div class="bar-address">
+              {{this.location.address1}}<br>
+              {{this.location.city}}, {{this.location.state}} {{this.location.zip_code}}
+            </div>
+
+            <div class="bar-distance text-muted small">
+              <span class="fa fa-map-marker"></span>
+              {{this.distance}} miles away
+            </div>
+            
+            {{this.numAttending}} going
+          </div>
+          
+          {{#if ../user}}
+            <div class="panel-footer">
+              {{#if this.isAttending}}
+                <a href="/remove/{{this.id}}" class="btn btn-success btn-block">I'm Going</a>
+              {{else}}
+                <a href="/attend/{{this.id}}" class="btn btn-default btn-block">Not Going</a>
+              {{/if}}
+            </div>
+          {{/if}}
+        </div>
+
+      </div>
+    {{else}}
+      <div class="col-xs-12 text-center">
+        <em>No results found.</em>
+      </div>
+    {{/each}}
+</div>
+{{/if}}
