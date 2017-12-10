@@ -1,0 +1,21 @@
+<header class="page-header jumbotron">
+  <div class="container relative">
+    <h2>Nightlife Coordinator App.</h2>
+    
+    
+    <nav class="page-nav">
+      <ul class="list-inline">
+        {{#if user}}
+          <li><a href="/logout" class="btn btn-link">Logout</a></li>
+        {{else}}
+          <li>
+            <a href="/auth/twitter" class="btn btn-info">
+              Login with Twitter
+              <span class="fa fa-twitter"></span>
+            </a>
+          </li>
+        {{/if}}
+      </ul>
+    </nav>
+  </div>
+</header>
