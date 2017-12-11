@@ -1,65 +1,39 @@
-<div class="search-bar row">
-  <div class="col-md-6 col-md-offset-3">
-    
-    <form action="/" method="get">
-      <label for="location" class="sr-only">Enter your location</label>
-      <div class="input-group input-group-lg">
-        <input type="text" name="location" id="location" class="form-control" placeholder="Enter your location">
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-default">Go!</button>
-        </span>
-      </div>
-    </form>
-    
-    <p class="yelp-credit">Powered by <a href="http://yelp.com" target="_blank">Yelp</a>.</p>
-    
-  </div>
-</div>
-
-{{#if searchResults.length}}
-  <h2 class="search-request">Bars near <em>{{searchRequest.location}}</em></h2>
-  <div class="bars row">
-    {{#each searchResults}}
-      <div class="col-sm-4 col-md-3">
-
-        <div class="bar panel panel-default">
-          <a href="{{this.url}}" target="_blank" class="bar-thumb" style="background-image: url({{this.image_url}})">
-            <span class="sr-only">Thumbanil for {{this.name}}</span>
-          </a>
-          <div class="panel-body">
-            <h3 class="bar-title">
-              <a href="{{this.url}}" target="_blank">{{this.name}}</a>
-            </h3>
-
-            <div class="bar-address">
-              {{this.location.address1}}<br>
-              {{this.location.city}}, {{this.location.state}} {{this.location.zip_code}}
-            </div>
-
-            <div class="bar-distance text-muted small">
-              <span class="fa fa-map-marker"></span>
-              {{this.distance}} miles away
-            </div>
-            
-            {{this.numAttending}} going
-          </div>
-          
-          {{#if ../user}}
-            <div class="panel-footer">
-              {{#if this.isAttending}}
-                <a href="/remove/{{this.id}}" class="btn btn-success btn-block">I'm Going</a>
-              {{else}}
-                <a href="/attend/{{this.id}}" class="btn btn-default btn-block">Not Going</a>
-              {{/if}}
-            </div>
-          {{/if}}
-        </div>
-
-      </div>
-    {{else}}
-      <div class="col-xs-12 text-center">
-        <em>No results found.</em>
-      </div>
-    {{/each}}
-</div>
-{{/if}}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FreeCodeCamp API - Nightlife Coordinator App.</title>
+	<meta content="A cool thing made with Glitch" name="description">
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/style.css" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+	<script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+  <link href="https://cdn.glitch.com/f5db0082-b880-4006-b9a4-409fecd27a35%2Ffavicon.jpg?1512944246618" rel="shortcut icon">
+	<link href="https://cdn.glitch.com/f5db0082-b880-4006-b9a4-409fecd27a35%2Ffavicon.jpg?1512944246618" rel="apple-touch-icon">
+</head>
+<body>
+	<div id="head">
+		<h2 id="brand"><a href="/">Nightlife Coordinator</a></h2>
+    <div id="login"></div>
+	</div>
+	
+	<center>
+		<div id="body">
+			<h3>Let's Go!</h3>
+			<div class="input-group app-form">
+				<input class="form-control input-field" id="search" placeholder="Enter your location..." style="display:inline-block" type="text">
+        <span class="input-group-btn"><button class="btn btn-default" id="search_bt">Search</button></span>
+        
+			</div><span id="searching" style="display:none;margin-top:15px;"><img alt="loading" height="50" src="https://cdn.glitch.com/f5db0082-b880-4006-b9a4-409fecd27a35%2Floader.gif?1512945488562" width="50"></span>
+		</div>
+		<div id="footer">
+			Powered by Google Places API &amp; FreeCodeCamp API - Nightlife Coordinator App.
+		</div>
+	</center>
+	<script src="/client.js">
+	</script>
+</body>
+</html>
