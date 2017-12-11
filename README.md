@@ -17,3 +17,6 @@ Created by JC Hurst
 
 4- As an unauthenticated user, when I login I should not have to search again.
 
+## Live app:
+
+https://diamond-partner.glitch.me/
