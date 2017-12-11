@@ -1,26 +1,33 @@
 {
   "name": "nightlife-app",
   "version": "1.0.0",
-  "description": "FreeCodeCamp API - Nightlife Coordination App.",
+  "description": "FreeCodeCamp API - Nightlife Coordinator App",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
+    "@google/maps": "^0.4.1",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
-    "express-handlebars": "^3.0.0",
     "express-session": "^1.15.3",
+    "google-maps": "^3.2.1",
+    "google-maps-api": "^2.0.1",
     "mongodb": "^2.2.28",
-    "mongoose": "^4.10.5",
-    "passport": "^0.3.2",
-    "passport-twitter": "^1.0.4",
-    "yelp-fusion": "^1.0.3"
+    "node-twitter-api": "^1.8.0",
+    "request": "^2.81.0",
+    "session": "^0.1.0"
+  },
+  "engines": {
+    "node": "8.1.x"
   },
   "repository": {
-    "type": "git",
-    "url": "https://github.com/jchurst/nightlife-app"
+    "url": "https://glitch.com/jchurst/nightlife-app"
   },
-  "author": "JC Hurst",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
