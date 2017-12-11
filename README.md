@@ -17,6 +17,3 @@ Created by JC Hurst
 
 4- As an unauthenticated user, when I login I should not have to search again.
 
-##Hint: 
-
-Try using the Yelp API to find venues in the cities your users search for. If you use Yelp's API, be sure to mention so in your app.
