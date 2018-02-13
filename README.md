@@ -3,9 +3,9 @@
 
 Created by JC Hurst
 
-[Github](https://github.com/jchurst) | [FreeCodeCamp](http://www.freecodecamp.com/jchurst) | [CodePen](http://codepen.io/jchurst/) | [LinkedIn](https://www.linkedin.com/in/jchurst) | [Webite](http://hurstcreative.com/) | [E-Mail](mailto:jchurstmail@gmail.com)
+[Github](https://github.com/jchurst) | [CodePen](http://codepen.io/jchurst/) | [LinkedIn](https://www.linkedin.com/in/jchurst) | [Webite](http://hurstcreative.com/) | [E-Mail](mailto:jchurstmail@gmail.com)
 
-# FreeCodeCamp API - Nightlife Coordinator App.
+# Nightlife Coordinator App.
 
 ## User stories:
 
